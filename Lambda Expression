@@ -1,0 +1,18 @@
+package com.classs;
+
+interface c{
+	
+	public abstract void add(int a,int b);
+
+}
+
+public class AA {
+
+	public static void main(String[] args) {
+		
+		c cc=( a, b)->{
+			System.out.println((a+b));
+		};
+		cc.add(2,4);
+	}
+}
