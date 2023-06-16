@@ -1,0 +1,59 @@
+package com.classs;
+
+//import java.net.InterfaceAddress;
+
+@FunctionalInterface
+interface ss{
+	public abstract void m1();
+	//public abstract void m2();
+	
+	public static void cc() {
+		System.out.println("Static method");
+	}
+	
+	default void dd() {
+		System.out.println("You are in default method");
+	}
+	
+	public static String f() {
+		return "Rehan you are in static method";
+	}
+	
+	//public abstract void c();
+		
+	
+	
+	public default int sname(int a,int b) {
+		return (a*b);
+	}
+	
+}
+
+//class Test2 implements ss{
+//	@Override
+//	public void m1() {
+//		System.out.println("Im in lambda expression");
+//		
+//	}
+//}
+
+public class Test {
+	
+public static void main(String[] args) {
+		
+//		Test2 t=new Test2();
+//		t.m1();
+	
+	 ss s=()-> System.out.println ("You are in functional interface");
+	 ss.cc();
+	 s.m1();
+	 s.dd();
+	 String sss=ss.f();
+	 System.out.println(sss);
+	 int nn=s.sname(2, 7);
+     System.out.println(nn);
+
+}
+	
+	
+}
